@@ -4,10 +4,17 @@ var a = 0, b = 0, c = 0,
     g = 0, h = 0, i = 0;
 
 var alpha = 0;
+function stop() {
+    for (var i = 1; i <= 9; i++) {
+        const btns = document.querySelector('.btn' + i);
+        btns.disabled = true;
+    }
+    setTimeout(reset, 2000);
+
+}
 function calculate() {
     if (a == 1 || b == 1 || c == 1 || d == 1 || e == 1 || f == 1 || g == 1 || h == 1 || i == 1 || a == 2 || b == 2 || c == 2 || d == 2 || e == 2 || f == 2 || g == 2 || h == 2 || i == 2) {
         alpha += 1;
-        console.log("vlaue of alpha :", alpha);
         if (a == 1 && b == 1 && c == 1 || a == 2 && b == 2 && c == 2) {
             const btn1 = document.querySelector('.btn1');
             const btn2 = document.querySelector('.btn2');
@@ -15,7 +22,7 @@ function calculate() {
             btn1.style.textDecoration = 'line-through';
             btn2.style.textDecoration = 'line-through';
             btn3.style.textDecoration = 'line-through';
-            setTimeout(reset, 2000);
+            stop();
 
         }
         else if (d == 1 && e == 1 && f == 1 || d == 2 && e == 2 && f == 2) {
@@ -25,8 +32,7 @@ function calculate() {
             btn1.style.textDecoration = 'line-through';
             btn2.style.textDecoration = 'line-through';
             btn3.style.textDecoration = 'line-through';
-            setTimeout(reset, 2000);
-
+            stop();
         }
         else if (g == 1 && h == 1 && i == 1 || g == 2 && h == 2 && i == 2) {
             const btn1 = document.querySelector('.btn7');
@@ -35,8 +41,7 @@ function calculate() {
             btn1.style.textDecoration = 'line-through';
             btn2.style.textDecoration = 'line-through';
             btn3.style.textDecoration = 'line-through';
-            setTimeout(reset, 2000);
-
+            stop();
         }
         else if (a == 1 && d == 1 && g == 1 || a == 2 && d == 2 && g == 2) {
             const btn1 = document.querySelector('.btn1');
@@ -45,8 +50,7 @@ function calculate() {
             btn1.style.textDecoration = 'line-through';
             btn2.style.textDecoration = 'line-through';
             btn3.style.textDecoration = 'line-through';
-            setTimeout(reset, 2000);
-
+            stop();
         }
         else if (b == 1 && e == 1 && h == 1 || b == 2 && e == 2 && h == 2) {
             const btn1 = document.querySelector('.btn2');
@@ -55,8 +59,7 @@ function calculate() {
             btn1.style.textDecoration = 'line-through';
             btn2.style.textDecoration = 'line-through';
             btn3.style.textDecoration = 'line-through';
-            setTimeout(reset, 2000);
-
+            stop();
         }
         else if (c == 1 && f == 1 && i == 1 || c == 2 && f == 2 && i == 2) {
             const btn1 = document.querySelector('.btn3');
@@ -65,8 +68,7 @@ function calculate() {
             btn1.style.textDecoration = 'line-through';
             btn2.style.textDecoration = 'line-through';
             btn3.style.textDecoration = 'line-through';
-            setTimeout(reset, 2000);
-
+            stop();
         }
         else if (a == 1 && e == 1 && i == 1 || a == 2 && e == 2 && i == 2) {
             const btn1 = document.querySelector('.btn1');
@@ -75,8 +77,7 @@ function calculate() {
             btn1.style.textDecoration = 'line-through';
             btn2.style.textDecoration = 'line-through';
             btn3.style.textDecoration = 'line-through';
-            setTimeout(reset, 2000);
-
+            stop();
         }
         else if (c == 1 && e == 1 && g == 1 || c == 2 && e == 2 && g == 2) {
             const btn1 = document.querySelector('.btn3');
@@ -85,17 +86,15 @@ function calculate() {
             btn1.style.textDecoration = 'line-through';
             btn2.style.textDecoration = 'line-through';
             btn3.style.textDecoration = 'line-through';
-            setTimeout(reset, 2000);
-
+            stop();
         }
         else if (alpha == 9) {
             const heading = document.getElementById('heading');
             heading.textContent = "Match Draw";
-            setTimeout(reset, 2000);
+            stop();
         }
     }
 }
-
 function one() {
     const button = document.querySelector('.btn1');
     button.disabled = true;
@@ -258,19 +257,4 @@ function nine() {
 
 function reset() {
     location.reload();
-    // num = 0;
-    // a = 0;
-    // b = 0;
-    // c = 0;
-    // d = 0;
-    // e = 0;
-    // f = 0;
-    // g = 0;
-    // h = 0;
-    // i = 0;
-    // for (let i = 1; i <= 9; i++) {
-    //     const button = document.querySelector('.btn'+i);
-    //     button.textContent = ''; 
-    //     button.disabled = false;
-    // }
 } 
